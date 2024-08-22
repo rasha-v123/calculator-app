@@ -1,6 +1,7 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const CalcContext = createContext();
+
 const CalcProvider = ({ children }) => {
   const [calc, setCalc] = useState({
     sign: "",
@@ -20,4 +21,9 @@ const CalcProvider = ({ children }) => {
   );
 };
 
-export default CalcContext;
+// export const calcUseContext = () => {
+//   const calcData = useContext(CalcContext);
+//   return calcData;
+// };
+
+export default CalcProvider;
